@@ -45,7 +45,7 @@ In this text editor, Yjs handles the following:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/mridul037/Share-editor.git
-   cd multi-user-text-editor
+   cd Share-editor
 
 # React + Vite
 
