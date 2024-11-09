@@ -1,7 +1,6 @@
 # Multi-User Text Editor
 
-
-Uploading ScreenRec_2024-11-09 10-40-10.mp4…
+https://github.com/user-attachments/assets/d7118da5-5aa9-4dfb-97f5-cc211d223d33
 
 
 A collaborative, Google Docs-like text editor allowing multiple users to edit documents in real time. Built using **React** and **Node.js** with **Yjs** for Conflict-Free Replicated Data Type (CRDT) synchronization, enabling smooth, conflict-free collaboration.
