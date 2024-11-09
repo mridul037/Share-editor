@@ -12,7 +12,7 @@ const wss = new WebSocket.Server({
   path: '/my-shared-doc'
 });
 
-const allowedOrigins = ['https://idyllic-kitsune-c7f4b8.netlify.app/'];
+const allowedOrigins = ['http://localhost:5173'];
 
 // Enable CORS
 
