@@ -16,7 +16,7 @@ function App() {
     const ytext = ydoc.getText('quill')
     
     const wsProvider = new WebsocketProvider(
-      'wss://share-editor-back.onrender.com',
+      'wss://<server_url>',
       'my-shared-doc',
       ydoc,
     )
