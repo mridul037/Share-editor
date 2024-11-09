@@ -1,0 +1,169 @@
+/* Global styles */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --background-color: #ecf0f1;
+  --text-color: #34495e;
+  --border-color: #bdc3c7;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  
+}
+
+/* Editor container */
+.editor-container {
+  min-width: 80vw;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 4rem); /* Subtract the top and bottom margin */
+}
+
+/* Editor header */
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.editor-header h1 {
+  font-size: 28px;
+  color: var(--primary-color);
+  margin: 0;
+  font-weight: 600;
+}
+
+.connection-status {
+  font-size: 14px;
+  color: var(--secondary-color);
+  background-color: rgba(46, 204, 113, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* Editor main content */
+.editor-main {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Quill editor styles */
+.ql-toolbar.ql-snow {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-color: var(--border-color);
+  background-color: #f8f9fa;
+}
+
+.editor-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-content .ql-container {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.ql-container.ql-snow {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-color: var(--border-color);
+  min-height: 300px;
+}
+
+/* Custom styles for Quill editor content */
+.ql-editor {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.ql-editor h1,
+.ql-editor h2,
+.ql-editor h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.ql-editor p {
+  margin-bottom: 1rem;
+}
+
+/* Toolbar button styles */
+.ql-snow .ql-toolbar button,
+.ql-snow .ql-picker {
+  transition: background-color 0.3s ease;
+}
+
+.ql-snow .ql-toolbar button:hover,
+.ql-snow .ql-picker:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+.ql-snow .ql-toolbar button.ql-active,
+.ql-snow .ql-picker.ql-expanded {
+  background-color: rgba(52, 152, 219, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .editor-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .editor-header h1 {
+    font-size: 24px;
+  }
+
+  .ql-editor {
+    font-size: 14px;
+  }
+
+  .connection-status {
+    font-size: 12px;
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+/* Animation for connection status */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.connection-status.connected {
+  animation: pulse 2s infinite;
+}
